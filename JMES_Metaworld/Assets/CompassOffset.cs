@@ -15,6 +15,8 @@ public class CompassOffset : MonoBehaviour
     [SerializeField]
     public UnityEvent<float> headingOffsetUpdated = new UnityEvent<float>();
 
+    bool first = true;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -32,7 +34,11 @@ public class CompassOffset : MonoBehaviour
         switch (args.state)
         {
             case ARSessionState.SessionTracking:
-                ApplyCompassOffset();
+                if (first)
+                {
+                    ApplyCompassOffset();
+                    first = false;
+                }
                 break;
         }
     }

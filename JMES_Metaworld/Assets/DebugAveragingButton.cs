@@ -16,7 +16,7 @@ public class DebugAveragingButton : MonoBehaviour
     {
 
         geoManager = FindObjectOfType<GeolocationManager>();
-        active = geoManager.useOffset;
+        active = geoManager.averaging;
 
         Button button = this.GetComponent<Button>();
 

@@ -245,7 +245,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 191049114}
-  m_LocalRotation: {x: 0, y: -0.9988484, z: 0, w: 0.047978207}
+  m_LocalRotation: {x: 0, y: -0.9981348, z: 0, w: 0.061048605}
   m_LocalPosition: {x: 0, y: 4, z: 5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -253,7 +253,7 @@ Transform:
   - {fileID: 541888860}
   m_Father: {fileID: 1018828794}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: -174.5, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -173, z: 0}
 --- !u!114 &191049116
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -274,6 +274,9 @@ MonoBehaviour:
     altitude: 0
   height: 4
   initialRot: {x: 0, y: 0, z: 0}
+  positions: []
+  targetPos: {x: 0, y: 0, z: 0}
+  smoothingSpeed: 2
 --- !u!1 &382728665
 GameObject:
   m_ObjectHideFlags: 0
@@ -765,6 +768,9 @@ MonoBehaviour:
     altitude: 0
   height: 4
   initialRot: {x: 0, y: 0, z: 0}
+  positions: []
+  targetPos: {x: 0, y: 0, z: 0}
+  smoothingSpeed: 5
 --- !u!1 &513328785
 GameObject:
   m_ObjectHideFlags: 0
@@ -818,6 +824,9 @@ MonoBehaviour:
     altitude: 0
   height: 4
   initialRot: {x: 0, y: 0, z: 0}
+  positions: []
+  targetPos: {x: 0, y: 0, z: 0}
+  smoothingSpeed: 2
 --- !u!1 &541888859
 GameObject:
   m_ObjectHideFlags: 0
@@ -1809,7 +1818,7 @@ MonoBehaviour:
     hAccuracy: 0
     altitude: 130
   maxDistance: 200
-  averaging: 1
+  averaging: 0
   averagingCount: 30
 --- !u!1 &1264628086
 GameObject:

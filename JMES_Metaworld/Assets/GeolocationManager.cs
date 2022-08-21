@@ -206,7 +206,7 @@ public class GeolocationManager : MonoBehaviour
             obj.positions.Add(position);
             if (obj.positions.Count > averagingCount)
                 obj.positions.RemoveAt(0);
-            foreach(Vector3 vec in obj.positions)
+            foreach (Vector3 vec in obj.positions)
             {
                 pos += vec;
 
@@ -217,14 +217,15 @@ public class GeolocationManager : MonoBehaviour
             obj.transform.localPosition = pos;
         }
         //Only update geolocation if distance gets bigger than maxDistance
-        else if (!anchorManager.enabled || Vector3.Distance(obj.transform.localPosition, position) > 5)
-            obj.transform.localPosition = position;
+        else if (!anchorManager.enabled || Vector3.Distance(obj.targetPos, position) > 5)
+            obj.targetPos = position;
+            //obj.transform.localPosition = position;
 
 
         //obj.transform.localEulerAngles = new Vector3(obj.initialRot.x, obj.initialRot.y, obj.initialRot.z);
         //obj.transform.Rotate(Vector3.up, rotOffset);
 
-        if (Vector3.Distance(obj.transform.position, this.transform.position) > maxDistance)
+        if (Vector3.Distance(obj.targetPos, this.transform.position) > maxDistance)
         {
             obj.gameObject.SetActive(false);
         }
